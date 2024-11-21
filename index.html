@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost and Found Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Lost and Found Platform</h1>
+    <p>Report lost or found items and help reunite them with their owners.</p>
+  </header>
+
+  <main>
+    <!-- Form to add items -->
+    <section id="add-item">
+      <h2>Report Lost or Found Item</h2>
+      <form id="item-form">
+        <label>
+          Item Type:
+          <select id="item-type">
+            <option value="Lost">Lost</option>
+            <option value="Found">Found</option>
+          </select>
+        </label>
+        <label>
+          Item Name:
+          <input type="text" id="item-name" placeholder="e.g., Wallet, Phone" required>
+        </label>
+        <label>
+          Description:
+          <textarea id="item-description" placeholder="Provide details about the item" required></textarea>
+        </label>
+        <label>
+          Date:
+          <input type="date" id="item-date" required>
+        </label>
+        <label>
+          Location:
+          <input type="text" id="item-location" placeholder="e.g., Central Park" required>
+        </label>
+        <label>
+          Contact:
+          <input type="text" id="item-contact" placeholder="Your email or phone" required>
+        </label>
+        <label>
+          Upload Photo:
+          <input type="file" id="item-photo" accept="image/*">
+        </label>
+        <button type="submit">Add Item</button>
+      </form>
+    </section>
+
+    <!-- Display items -->
+    <section id="item-list">
+      <h2>Items</h2>
+      <div>
+        <label>Filter by Type:</label>
+        <select id="filter-type">
+          <option value="All">All</option>
+          <option value="Lost">Lost</option>
+          <option value="Found">Found</option>
+        </select>
+      </div>
+      <div id="items-container"></div>
+    </section>
+
+    <!-- Chat Section -->
+    <section id="chat-section">
+      <h2>Chat</h2>
+      <div id="chat-window">
+        <div id="messages"></div>
+      </div>
+      <div id="chat-controls">
+        <input type="text" id="chat-input" placeholder="Type your message">
+        <button id="chat-send">Send</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Lost and Found Platform</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
